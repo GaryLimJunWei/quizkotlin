@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layoutHead"
+            android:background="@color/cardview_shadow_start_color"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/profile_picture"
+                android:background="@drawable/ic_boy"
+                android:layout_centerInParent="true"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+
+            <EditText
+                android:hint="Your Name"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/profile_picture"
+                android:enabled="true"
+                android:id="@+id/edit_text_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:visibility="invisible"
+                android:id="@+id/progressbar_pic"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="19dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:layout_below="@id/layoutHead"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_gravity="top"
+                android:drawableLeft="@drawable/ic_point"
+                android:drawablePadding="16dp"
+                android:textSize="14dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="330dp"
+                android:layout_height="35dp"
+                android:hint="Enter your name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:labelFor="@id/loginEmail"
+                android:text="Current Password" />
+
+
+            <EditText
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_gravity="top"
+                android:drawablePadding="16dp"
+                android:drawableLeft="@drawable/ic_lock"
+                android:hint="Current Password"
+                android:enabled="true"
+                android:inputType="textPassword"
+                android:id="@+id/edit_current_password"
+                android:layout_marginBottom="15dp"
+                android:textSize="14dp"
+                android:layout_width="330dp"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:labelFor="@id/loginEmail"
+                android:text="New Password" />
+
+            <EditText
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_gravity="top"
+                android:drawablePadding="16dp"
+                android:drawableLeft="@drawable/ic_lock"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:enabled="true"
+                android:id="@+id/edit_new_password"
+                android:layout_marginBottom="15dp"
+                android:textSize="14dp"
+                android:layout_width="330dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:labelFor="@id/loginEmail"
+                android:text="Confirm Password" />
+
+            <EditText
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_gravity="top"
+                android:drawablePadding="16dp"
+                android:drawableLeft="@drawable/ic_lock"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:enabled="true"
+                android:id="@+id/edit_confirm_password"
+                android:layout_marginBottom="0dp"
+                android:textSize="14dp"
+                android:layout_width="330dp"
+                android:layout_height="35dp" />
+
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:visibility="invisible"
+                android:layout_margin="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/button_save_changes"
+                android:layout_marginTop="15dp"
+                android:textColor="@android:color/white"
+                android:background="#d67601"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:text="Save Changes"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

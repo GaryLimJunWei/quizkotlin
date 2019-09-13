@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/DashboardFragment">
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.quizbeta.ui.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/DashboardFragment"
+        android:name="com.example.quizbeta.ui.fragments.AdminDashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/admin_dashboard" />
+    <fragment
+        android:id="@+id/EmpDbFragment"
+        android:name="com.example.quizbeta.ui.fragments.AdminEmpDatabaseFragment"
+        android:label="Employee Database"
+        tools:layout="@layout/admin_employee_db" />
+</navigation>
