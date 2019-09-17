@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.quizbeta.ui.auth.AuthViewModel" />
+    </data>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root_layout"
     android:background="#000000"
     android:orientation="vertical"
     tools:context=".ui.auth.LoginActivity"
     android:scrollbarAlwaysDrawVerticalTrack="true">
 
     <RelativeLayout
-        android:id="@+id/loginLayout"
-        android:layout_centerInParent="true"
+        android:id="@+id/relative_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
         <ImageButton
             android:id="@+id/login_title"
@@ -31,34 +45,30 @@
             android:textSize="26sp"
             android:textStyle="bold" />
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/login_title"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="130dp"
             android:background="#EDEBEB"
             android:elevation="4dp"
             android:orientation="vertical"
             android:padding="20dp">
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="30dp">
 
 
                 <TextView
-                    android:labelFor="@id/loginEmail"
                     android:text="Employee ID"
                     android:fontFamily="sans-serif-light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <EditText
-                    android:id="@+id/loginEmail"
+                    android:text="@={viewmodel.empID}"
+                    android:id="@+id/loginID"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_email"
@@ -71,12 +81,13 @@
 
                 <TextView
                     android:labelFor="@id/loginPW"
-                    android:text="password"
+                    android:text="Password"
                     android:fontFamily="sans-serif-light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <EditText
+                    android:text="@={viewmodel.password}"
                     android:drawablePadding="10dp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -98,6 +109,7 @@
 
                 <Button
                     android:id="@+id/login_button"
+                    android:onClick="@{viewmodel::onLoginButtonClick}"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="22dp"
@@ -134,8 +146,6 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
-        </RelativeLayout>
-
     </RelativeLayout>
 
     <ProgressBar
@@ -145,4 +155,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-</RelativeLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+</layout>

@@ -8,7 +8,9 @@ import com.example.quizbeta.data.db.entities.User
 
 @Database(
     entities = [User::class],
-    version = 1
+    version = 1,
+    exportSchema = false
+
 )
 abstract class AppDatabase : RoomDatabase()
 {

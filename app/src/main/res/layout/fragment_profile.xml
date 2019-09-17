@@ -75,7 +75,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:labelFor="@id/loginEmail"
                 android:text="Current Password" />
 
 
@@ -97,7 +96,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:labelFor="@id/loginEmail"
                 android:text="New Password" />
 
             <EditText
@@ -118,7 +116,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:labelFor="@id/loginEmail"
                 android:text="Confirm Password" />
 
             <EditText
