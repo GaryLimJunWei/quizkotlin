@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity(),AuthListener{
         val factory = AuthViewModelFactory(repository)
 
         val binding : ActivityLoginBinding = DataBindingUtil.setContentView(this,R.layout.activity_login)
-        val viewmodel = ViewModelProviders.of(this,factory).get(AuthViewModel::class.java)
+        val viewmodel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
         binding.viewmodel = viewmodel
 
         viewmodel.authListener = this

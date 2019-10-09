@@ -80,7 +80,6 @@
                     android:digits="1234567890"/>
 
                 <TextView
-                    android:labelFor="@id/loginPW"
                     android:text="Password"
                     android:fontFamily="sans-serif-light"
                     android:layout_width="wrap_content"
