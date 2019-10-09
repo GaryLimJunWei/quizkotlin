@@ -8,12 +8,17 @@ import com.example.quizbeta.R
 import kotlinx.android.synthetic.main.activity_forget_password.*
 import kotlinx.android.synthetic.main.reset_success_dialog.view.*
 
-class ForgetPasswordActivity : AppCompatActivity() {
+class ForgetPasswordActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forget_password)
+
+       cancel_button.setOnClickListener {
+           val intent = Intent(this,LoginActivity::class.java)
+           startActivity(intent)
+       }
 
         submit_button.setOnClickListener {
 
@@ -29,9 +34,5 @@ class ForgetPasswordActivity : AppCompatActivity() {
 
         }
 
-        cancel_button.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

@@ -10,6 +10,7 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import com.example.quizbeta.R
 import com.example.quizbeta.ui.auth.LoginActivity
+import com.example.quizbeta.ui.auth.RegisterPageActivity
 import kotlinx.android.synthetic.main.activity_page_first.*
 
 class FirstPageActivity : AppCompatActivity() {
@@ -27,13 +28,6 @@ class FirstPageActivity : AppCompatActivity() {
 
     }
 
-    fun ContinueButton()
-    {
-        continue_btn.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
-    }
 
     fun myCustomSpinner()
     {
@@ -50,10 +44,36 @@ class FirstPageActivity : AppCompatActivity() {
                 view: View?,
                 position: Int,
                 id: Long
-            ) {
+            )
+            {
                 Toast.makeText(this@FirstPageActivity,myString[position],LENGTH_LONG).show()
+                if(position==2)
+                {
+                    existingEmployeeLogin()
+                }
+                else
+                {
+                    ContinueButton()
+                }
             }
 
+        }
+    }
+
+
+    fun ContinueButton()
+    {
+        continue_btn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    fun existingEmployeeLogin()
+    {
+        continue_btn.setOnClickListener {
+            val intent = Intent(this, RegisterPageActivity::class.java)
+            startActivity(intent)
         }
     }
 

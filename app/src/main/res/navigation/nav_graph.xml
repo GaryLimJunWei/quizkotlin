@@ -19,4 +19,18 @@
         android:name="com.example.quizbeta.ui.fragments.AdminEmpDatabaseFragment"
         android:label="Employee Database"
         tools:layout="@layout/admin_employee_db" />
+    <fragment
+        android:id="@+id/ManageTestFragment"
+        android:name="com.example.quizbeta.ui.fragments.ManageTestFragment"
+        android:label="fragment_manage_test"
+        tools:layout="@layout/fragment_manage_test" >
+        <action
+            android:id="@+id/action_ManageTestFragment_to_programmingFrameworkFragment"
+            app:destination="@id/ProgrammingFrameworkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProgrammingFrameworkFragment"
+        android:name="com.example.quizbeta.ui.fragments.ProgrammingFrameworkFragment"
+        android:label="fragment_programming_framework"
+        tools:layout="@layout/fragment_programming_framework" />
 </navigation>

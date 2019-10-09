@@ -18,7 +18,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        
+
 
     }
     buildTypes {
@@ -28,7 +28,7 @@ android {
         }
     }
 
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 }
@@ -52,6 +52,10 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    //Retrofit and GSON
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
     //Android Room
     implementation "androidx.room:room-runtime:2.1.0-rc01"
     implementation "androidx.room:room-ktx:2.1.0-rc01"
@@ -64,7 +68,13 @@ dependencies {
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
 
+    //Make Image Circle
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
 
 }
 
-kapt { generateStubs = true}
+kapt { generateStubs = true }

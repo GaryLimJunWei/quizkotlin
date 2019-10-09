@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <item
@@ -11,10 +12,12 @@
         android:id="@+id/ProfileFragment"
         android:title="Profile"/>
 
-
     <item
         android:id="@+id/EmpDbFragment"
-        android:title="Employee Database"
-        />
+        android:title="Employee Database"/>
+
+    <item
+        android:id="@+id/ManageTestFragment"
+        android:title="Manage Test"/>
 
 </menu>
